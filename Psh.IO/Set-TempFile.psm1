@@ -1,5 +1,21 @@
 function Set-TempFile
 {
+	<#
+		.SYNOPSIS
+		Create a temp file.
+
+		.DESCRIPTION
+		Creates a temp file in the system temp directory.
+
+		.PARAMETER Prefix
+		The prefix of the temp file.
+
+		.PARAMETER Postfix
+		The postfix of the temp file.
+
+		.PARAMETER DoNotCreate
+		Set if you only need the path of the temp file without creating it.
+	#>
 	param
 	(
 		[parameter(Mandatory = $false)]
@@ -27,7 +43,7 @@ function Set-TempFile
 
 	if ($true -ne $doNotCreate)
 	{
-		New-Item -Path "$tempFilePath" -ItemType "Directory"
+		New-Item -Path "$tempFilePath" -ItemType "File" | Out-Null
 	}
 
 	return $tempFilePath

@@ -55,5 +55,3 @@ function Read-IniFile
 
 	return $content
 }
-
-Export-ModuleMember Read-IniFile
