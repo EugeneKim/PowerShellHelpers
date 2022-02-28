@@ -1,4 +1,4 @@
-Import-Module ".\Psh.Utility\Invoke-Process.psm1" -Force
+Import-Module "..\Psh.Utility\Invoke-Process.psm1" -Force
 
 $output = Invoke-Process -Exe "ping" -Arguments "localhost"
 

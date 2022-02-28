@@ -1,4 +1,4 @@
-Import-Module ".\Psh.Utility\Write-IniFile.psm1" -Force
+Import-Module "..\Psh.Utility\Write-IniFile.psm1" -Force
 
 # Create a new INI file with a hashtable.
 $content = [Ordered]@{}
